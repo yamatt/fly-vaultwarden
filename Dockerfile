@@ -1,1 +1,1 @@
-FROM ghcr.io/dani-garcia/vaultwarden@sha256:a46aa1364ecdc4679b658b48e4b0498c74542ecd0170dc4e9a261234c6820dc9
+FROM ghcr.io/dani-garcia/vaultwarden@sha256:d626d04934cd1192ad8ced1adb975099fca78cec33ab467d2d3c923cde7f3b0c
