@@ -32,7 +32,7 @@ jobs:
         env:
           FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
         run: |
-          flyctl ssh sftp get --app "${{ secrets.FLY_APP_NAME }}" /data/uploads ./data --recursive
+          flyctl ssh sftp get --app "${{ secrets.FLY_APP_NAME }}" /data ./data --recursive
       - name: Install rclone
         run: |
           sudo apt-get update && sudo apt-get install -y rclone
@@ -41,4 +41,4 @@ jobs:
           RCLONE_B2_ACCOUNT: "${{ secrets.B2_ACCOUNT_ID }}"
           RCLONE_B2_KEY: "${{ secrets.B2_ACCOUNT_KEY }}"
         run: |
-          rclone copy ./data ":b2:${{ secrets.B2_BUCKET_NAME }}/vaultwarden/copy/uploads" --progress
+          rclone copy ./data ":b2:${{ secrets.B2_BUCKET_NAME }}/vaultwarden/copy/"
