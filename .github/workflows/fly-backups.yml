@@ -15,9 +15,6 @@ jobs:
     name: Backup data
     runs-on: ubuntu-slim
     steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
-        with:
-          persist-credentials: false
       - uses: superfly/flyctl-actions/setup-flyctl@98172f70657cb3e15db199af139be99bd3e61200 # master
       - name: Get machine ID
         id: machine
