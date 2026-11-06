@@ -10,6 +10,7 @@ on:
   schedule:
     - cron: "0 2 * * *"
 
+permissions: {}
 jobs:
   backup:
     name: Backup data
