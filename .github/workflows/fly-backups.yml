@@ -11,6 +11,11 @@ on:
     - cron: "0 2 * * *"
 
 permissions: {}
+
+concurrency:
+  group: fly-backups
+  cancel-in-progress: false
+
 jobs:
   backup:
     name: Backup data
