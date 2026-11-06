@@ -9,6 +9,11 @@ on:
       - "Dockerfile"
       - "fly.toml"
       - ".github/workflows/fly-deploy.yml"
+  workflow_run:
+    workflows:
+      - Auto-merge
+    types:
+      - completed
 permissions:
   contents: read
 jobs:
